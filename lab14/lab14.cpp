@@ -22,7 +22,7 @@ int main()
     }
     fclose(fl);
 
-    FILE* fm = fopen("ou1.txt", "at");
+    FILE* fm = fopen("ou1.txt", "at");//1
     for (i = 0; i < n; i++)
     {
         for (j = 0; j < n; j++) fprintf(fm, "%d%s", a[i][j]," ");
@@ -46,7 +46,7 @@ int main()
         U[v2[i]]++;
     }
 
-    fm = fopen("ou2.txt", "at");
+    fm = fopen("ou2.txt", "at");//2
     for (i = 0; i < n; i++) fprintf(fm, "%d%s", L[i]," ");
     fprintf(fm, "\n");
     for (i = 0; i < n; i++) fprintf(fm, "%d%s", S[i]," ");
@@ -56,7 +56,7 @@ int main()
     fclose(fm);
 
 
-    for (i = 0;i < n;i++) U[i] = S[i];
+    for (i = 0;i < n;i++) U[i] = S[i];//3
     fm = fopen("ou3.txt", "at");
     for (i = 0; i < n; i++)
         for (j = U[i]; j < S[i] + L[i]; j++)
